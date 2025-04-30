@@ -56,6 +56,20 @@ header {
   background-color: #005fa3;
 }
 
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+}
+
+.row.header {
+  font-weight: bold;
+  background-color: #f0f0f0;
+  border: 2px solid black;
+}
+
 /* IDs */
 /* === TITLE CONTAINER === */
 #title-container {
@@ -69,4 +83,9 @@ header {
 #title-container li {
   list-style: none;
   text-align: center;
+}
+#errorMessage {
+  text-align: center;
+  padding: 5px 0;
+  font-size: large;
 }
