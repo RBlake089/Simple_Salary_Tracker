@@ -7,7 +7,7 @@
   max-width: 500px;
 }
 
-.salary-list {
+.salary-header {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 10px
