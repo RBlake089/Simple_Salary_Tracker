@@ -16,14 +16,29 @@
         <form id="salary-form-el" class="main-form">
           <div class="form-group">
             <label for="date">Date:</label>
-        
-            <input type="date" id="date" name="date" required autocomplete="off"/>
+            <div>
+              <input
+                type="date"
+                id="date"
+                name="date"
+                required
+                autocomplete="off"
+              />
+            </div>
           </div>
 
           <div class="form-group">
             <label for="salary">Salary:</label>
-        
-            <input type="number" id="salary" name="salary" min="0" required autocomplete="off"/>
+            <div>
+              <input
+                type="number"
+                id="salary"
+                name="salary"
+                min="0"
+                required
+                autocomplete="off"
+              />
+            </div>
           </div>
 
           <button type="submit" id="add-btn-el">Add Salary</button>
@@ -37,8 +52,8 @@
             <div>Date:</div>
             <div>Pay:</div>
           </div>
-          
-          <hr>  
+
+          <hr />
 
           <ul id="date-salary-el" class="salary-list">
             <!-- JS will inject pairs of <li> Date </li><li> Salary </li> -->

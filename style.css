@@ -1,33 +1,47 @@
+/* === ID Selectors === */
 
-
-/* Ids */
-#salary-form form{
-  display: flex;
+/* Styles the form inside the salary form section */
+#salary-form form {
+  display: flex; /* Stack inputs vertically */
   flex-direction: column;
-  max-width: 500px;
+  max-width: 500px; /* Prevents it from stretching too wide */
 }
 
-.main-form{
-  border: 1px solid black;
-  padding: 20px;
-  border-radius: 10px;
-  margin: 20px;
-  max-width: 20rem;
-  height: 20rem;
-  display: flex;
+
+/* === Class Selectors === */
+
+/* Container for the entire form block */
+.main-form {
+  border: 1px solid black; /* Basic border for structure */
+  padding: 20px; /* Inner spacing */
+  border-radius: 10px; /* Rounded corners for a soft look */
+  margin: 20px; /* Spacing from surrounding elements */
+  max-width: 20rem; /* Controls overall width */
+  height: 20rem; /* Fixed height (consider auto for dynamic layouts) */
+  display: flex; /* Flexbox for alignment */
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #f2f2f2;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
-  cursor: pointer;
-  
-  
+  background-color: #f2f2f2; /* Light gray background */
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  cursor: pointer; /* Optional – makes the whole form look clickable */
 }
 
+/* Style for the form's submit button */
+.main-form button {
+  width: 208px; /* Consistent button width */
+  border-radius: 5px; /* Slightly rounded edges */
+}
+
+/* Styles for individual input fields in the form */
+.form-group input {
+  width: 200px; /* Fixed width for all inputs */
+  border-radius: 5px; /* Uniform input design */
+}
+
+/* Grid layout for salary list headers (Date and Pay columns) */
 .salary-header {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px
+  grid-template-columns: 1fr 1fr; /* Two equal-width columns */
+  gap: 10px; /* Space between columns */
 }
-    
