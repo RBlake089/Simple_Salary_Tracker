@@ -19,7 +19,7 @@
             <div>
               <input
                 type="date"
-                id="date"
+                id="date-el"
                 name="date"
                 required
                 autocomplete="off"
@@ -32,7 +32,7 @@
             <div>
               <input
                 type="number"
-                id="salary"
+                id="salary-el"
                 name="salary"
                 min="0"
                 required
@@ -46,9 +46,8 @@
       </section>
       <section>
         <div class="center">
-           <h2>Salary List</h2>
+          <h2>Salary List</h2>
         </div>
-       
 
         <div class="salary-grid">
           <div class="salary-header">
@@ -58,22 +57,22 @@
 
           <hr />
 
-          <ul id="date-salary-el" class="salary-list">
-            <!-- JS will inject pairs of <li> Date </li><li> Salary </li> -->
-          </ul>
+          <div id="date-salary-el" class="salary-grid-rows">
+            <!-- JS adds div.date + div.salary -->
+          </div>
         </div>
       </section>
       <section>
         <!-- this is a example for what i want it to look like -->
-         <div class="center">
-           <h2>Monthly Average</h2>
-         </div>
-       
+        <div class="center">
+          <h2>Monthly Average</h2>
+        </div>
+
         <p>April Average Salary: $1000</p>
       </section>
       <section>
         <hr />
-        <button>Clear</button>
+        <button id="clear-btn-el">Clear</button>
       </section>
     </main>
     <footer>
