@@ -101,7 +101,13 @@ main {
   grid-template-columns: 1fr 1fr; /* Two equal-width columns */
   gap: 10px; /* Space between columns */
 }
+.salary-grid-rows{
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two equal-width columns */
+  gap: 10px; /* Space between columns */
+}
 .center {
   display: flex;
   justify-content: center;
 }
+
