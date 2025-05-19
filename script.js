@@ -22,7 +22,7 @@ const monthNames = [
 ];
 
 // FUNCTIONS
-addBtnEl.addEventListener("click", function () {
+function postSalaryNDate() {
   if (salaryElNumber()) {
     let date = dateEl.value.trim();
     let salary = salaryEl.value.trim();
@@ -39,7 +39,9 @@ addBtnEl.addEventListener("click", function () {
     const salaryParagraph = document.createElement("p");
 
     // Set text content for the new p elements
-    dateParagraph.textContent = `Month: ${monthNames[parseInt(month) - 1]} ${year}`; // Full month name and year
+    dateParagraph.textContent = `Month: ${
+      monthNames[parseInt(month) - 1]
+    } ${year}`; // Full month name and year
     salaryParagraph.textContent = `Salary: $${salary}`;
 
     // Append the p elements to the date-salary-el container
@@ -50,7 +52,7 @@ addBtnEl.addEventListener("click", function () {
     dateEl.value = "";
     salaryEl.value = "";
   }
-});
+}
 
 function salaryElNumber() {
   const value = salaryEl.value.trim();
@@ -60,3 +62,10 @@ function salaryElNumber() {
   }
   return true;
 }
+
+addBtnEl.addEventListener("click", postSalaryNDate);
+salaryEl.addEventListener("keydown", function (event) {
+  if (event.key === "Enter") {
+    postSalaryNDate();
+  }
+});
