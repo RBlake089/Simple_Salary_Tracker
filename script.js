@@ -5,6 +5,22 @@ const salaryEl = document.getElementById("salary-el");
 const dateAndSalaryEl = document.getElementById("date-salary-el");
 const dateSalaryEl = document.getElementById("date-salary-el");
 
+// Month names for display
+const monthNames = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+];
+
 // FUNCTIONS
 addBtnEl.addEventListener("click", function () {
   if (salaryElNumber()) {
@@ -15,15 +31,15 @@ addBtnEl.addEventListener("click", function () {
     console.log("Date:", date);
     console.log("Salary:", salary);
 
-     // Get the month name from the date
-    const month = getMonthName(date);
+    // Extract month and year from the date
+    const [year, month] = date.split("-");
 
     // Create new p elements
     const dateParagraph = document.createElement("p");
     const salaryParagraph = document.createElement("p");
 
     // Set text content for the new p elements
-    dateParagraph.textContent = `Month: ${month}`;
+    dateParagraph.textContent = `Month: ${monthNames[parseInt(month) - 1]} ${year}`; // Full month name and year
     salaryParagraph.textContent = `Salary: $${salary}`;
 
     // Append the p elements to the date-salary-el container
@@ -43,15 +59,4 @@ function salaryElNumber() {
     return false;
   }
   return true;
-}
-
-// Function to get month name from the date
-function getMonthName(date) {
-  const monthNames = [
-    "January", "February", "March", "April", "May", "June",
-    "July", "August", "September", "October", "November", "December"
-  ];
-  
-  const dateObj = new Date(date);
-  return monthNames[dateObj.getMonth()]; // Returns the month name (e.g., 'May')
 }
